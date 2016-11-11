@@ -505,6 +505,7 @@
 				4E074CA81DCE8673004AF8B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E074CA91DCE8673004AF8B9 /* Build configuration list for PBXNativeTarget "FoodTracker-EdTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +514,7 @@
 				4E074CAB1DCE8673004AF8B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E074CAC1DCE8673004AF8B9 /* Build configuration list for PBXNativeTarget "FoodTracker-EdUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +523,7 @@
 				4E074CAE1DCE8673004AF8B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
