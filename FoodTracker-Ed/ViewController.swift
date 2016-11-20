@@ -69,6 +69,13 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     // MARK: Actions
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+        //If nothing happens then you may have run into a privacy issue
+        // check the debug logs in this case, I need to set a key
+        // NSPhotoLibraryUsageDescription  in the Info.plist
+        //
+        // check https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW17
+        // And check http://stackoverflow.com/questions/39519773/nsphotolibraryusagedescription-key-must-be-present-in-info-plist-to-use-camera-r
+        
         //Hide the Keyboard
         nameTextField.resignFirstResponder()
         

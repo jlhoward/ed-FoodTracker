@@ -46,12 +46,15 @@
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PXh-17-gPY"/>
                                         </connections>
                                     </button>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="UdR-nI-jHZ">
+                                    <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="UdR-nI-jHZ">
                                         <rect key="frame" x="0.0" y="80.5" width="288" height="320"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UdR-nI-jHZ" secondAttribute="height" multiplier="9:10" id="ZGe-AG-Dsq"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="L3I-W2-9bl" appends="YES" id="UAy-EB-F0o"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -70,12 +73,13 @@
                     <connections>
                         <outlet property="mealNameLabel" destination="uM4-hx-zZV" id="PnZ-ep-bnn"/>
                         <outlet property="nameTextField" destination="Un8-6d-RG7" id="kXJ-8A-MV6"/>
+                        <outlet property="photoImageView" destination="UdR-nI-jHZ" id="JPZ-0B-7WA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="0lS-XW-yzl">
+                <tapGestureRecognizer id="L3I-W2-9bl">
                     <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="ooL-u9-xec"/>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="chu-Nk-Ipk"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
