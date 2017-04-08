@@ -9,15 +9,24 @@
 import UIKit
 
 @IBDesignable class RatingControl: UIStackView {
+    //@IB....  lets the Interface Builder connect to the app
     
     //MARK: Properties
     private var ratingButtons = [UIButton]()
     var rating = 0
-    /*
-        Keeping the buttons private but exposing the final rating
-     
+    /*      Keeping the buttons private but exposing the final rating
     */
-
+    @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0) {
+        didSet {
+            setupButtons()
+        }
+    }
+    @IBInspectable var starCount: Int = 5 {
+        didSet {
+            setupButtons()
+        }
+    }
+    
     //MARK: Initalizer
     override init(frame Frame: CGRect) {
         super.init(frame: Frame)
@@ -41,16 +50,24 @@ import UIKit
         //Logging
         print("setupButtons Called 🤙")
         
+        //clear old buttons
+        for button in ratingButtons {
+            removeArrangedSubview(button)
+            button.removeFromSuperview()
+        }
+        ratingButtons.removeAll()
+        
+        
         //Create 5
-        for _ in 0..<5 {
+        for _ in 0..<starCount {
             //Create the button
             let button = UIButton()
             button.backgroundColor = UIColor.red
             
             //Add Constraints
             button.translatesAutoresizingMaskIntoConstraints = false
-            button.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
-            button.widthAnchor.constraint(equalToConstant: 44.0).isActive = true
+            button.heightAnchor.constraint(equalToConstant: starSize.height).isActive = true
+            button.widthAnchor.constraint(equalToConstant: starSize.width).isActive = true
             
             //Setup the button action
             button.addTarget(self, action: #selector(RatingControl.ratingButtonTapped(button:)), for: .touchUpInside)
