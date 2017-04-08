@@ -8,18 +8,25 @@
 
 import UIKit
 
-class RatingsControl: UIView {
+class RatingsControl: UIStackView {
 
+    
 //MARK: Init
     override init(frame: CGRect) {
+        
+        print("RatingsControl.init called")
         super.init(frame: frame)
         setupButtons()
         
     }
     
     required init?(coder aDecoder: NSCoder) {
+        
+        //can't call print on a required init
+        //print("RatingsControl.init? called")
+        //setupButtons()
         super.init(coder: aDecoder)
-        setupButtons()
+        
         
     }
 
@@ -32,48 +39,35 @@ class RatingsControl: UIView {
     
     private func setupButtons() {
         //Create the button
-        
-        //Revised approach
-         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-         button.backgroundColor = UIColor.red
-        
-        //register button action
-        button.addTarget(self, action: #selector(RatingsControl.ratingButtonTapped(button:)), for: .touchUpInside)
-        //Add Button to Stack
-         addSubview(button)
-         
+        print("button setup")
         
         /*
-         // Text orignal code
-        let button = UIButton()
+        //Revised approach
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         button.backgroundColor = UIColor.red
-        
-        
-        //add Constraints
-        button.translatesAutoresizingMaskIntoConstraints = false   //igrnores buttons defined characteristics
-        button.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
-        button.widthAnchor.constraint(equalToConstant: 44.0).isActive = true
-        
-        //add button to stack
+        button.translatesAutoresizingMaskIntoConstraints = false
+       
+        //register button action
+        button.addTarget(self, action: #selector(RatingsControl.ratingButtonTapped(button:)), for: .touchUpInside)
+       
+        //Add Button to Stack
+        //addSubview(button)
         addSubview(button)
         */
         
+        //Code Per Project Tutorial
+        let button = UIButton()
+        button.backgroundColor = UIColor.red
+        
+        //Add Constraints
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 44.0).isActive = true
+        
+        //Add to the stack
+        addArrangeSubview(button)
+         
+        
+        
     }
-    
-//MARK: Old Ratings Control code
-    /*
-     
-     override func intrinsicContentSize() -> CGSize {
-     return GSize(width: 240, height: 40)
-     }
-     
-     Ignore for purposes of this app
-    
-     // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
 }

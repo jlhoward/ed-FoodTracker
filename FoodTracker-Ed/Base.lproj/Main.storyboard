@@ -23,8 +23,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="grQ-IO-Zf6">
-                                <rect key="frame" x="16" y="80" width="288" height="400.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="grQ-IO-Zf6">
+                                <rect key="frame" x="16" y="13" width="288" height="511"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM4-hx-zZV">
                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="20.5"/>
@@ -56,17 +56,17 @@
                                             <outletCollection property="gestureRecognizers" destination="L3I-W2-9bl" appends="YES" id="UAy-EB-F0o"/>
                                         </connections>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ih9-YC-d2d" customClass="R">
+                                        <rect key="frame" x="0.0" y="400.5" width="200" height="110"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Un8-6d-RG7" secondAttribute="trailing" id="8q3-Yf-wIz"/>
                                     <constraint firstItem="Un8-6d-RG7" firstAttribute="leading" secondItem="grQ-IO-Zf6" secondAttribute="leading" id="q4f-8u-u3y"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="MDj-d2-qoU" customClass="RatingsControl" customModule="FoodTracker_Ed" customModuleProvider="target">
-                                <rect key="frame" x="16" y="480" width="240" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
@@ -88,7 +88,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="127.5" y="133.09859154929578"/>
+            <point key="canvasLocation" x="-146" y="-135"/>
         </scene>
     </scenes>
     <resources>
