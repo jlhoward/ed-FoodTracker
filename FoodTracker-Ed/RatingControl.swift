@@ -78,6 +78,7 @@ import UIKit
         }
         ratingButtons.removeAll()
         
+    
         //Load up Button Images
         let ratingImageBungle = Bundle(for: type(of: self))
         let filledStar =  UIImage(named: "filledStar", in: ratingImageBungle, compatibleWith: self.traitCollection)
@@ -85,7 +86,7 @@ import UIKit
         let highlightedStar = UIImage(named: "highlightedStar", in: ratingImageBungle, compatibleWith: self.traitCollection)
         
         //Create as many buttons as is defined in starCount
-        for _ in 0..<starCount {
+        for forIndex in 0..<starCount {
             //Create the button
             let button = UIButton()
             //button.backgroundColor = UIColor.red
@@ -100,6 +101,9 @@ import UIKit
             button.heightAnchor.constraint(equalToConstant: starSize.height).isActive = true
             button.widthAnchor.constraint(equalToConstant: starSize.width).isActive = true
             
+            // Set the accessibility label
+            button.accessibilityLabel = "Set \(forIndex + 1) star rating star rating"
+
             //Setup the button action
             button.addTarget(self, action: #selector(RatingControl.ratingButtonTapped(button:)), for: .touchUpInside)
             /* lots of stuff going on....
@@ -123,6 +127,24 @@ import UIKit
     private func updateButtonSelectedStates() {
         for (index, button) in ratingButtons.enumerated() {
             button.isSelected = index < rating
+            
+            let hintString: String?
+            if rating == index + 1 {
+                hintString = "Tap to reset the rating to zero."
+            } else {
+                hintString = nil
+            }
+            
+            let valueString: String
+            switch( rating ) {
+                case 0: valueString = "No rating set"
+                case 1: valueString = "1 star set"
+                default: valueString = "\(rating) stars set"
+            }
+            
+            //assign the hint string and value string
+            button.accessibilityHint = hintString
+            button.accessibilityValue = valueString
         }
     }
     
