@@ -16,6 +16,7 @@
 		4E074CA21DCE8673004AF8B9 /* FoodTracker_EdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E074CA11DCE8673004AF8B9 /* FoodTracker_EdUITests.swift */; };
 		4E316B9D1E998F2300FF9727 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E316B9C1E998F2300FF9727 /* RatingControl.swift */; };
 		4EE349D91EA02A4400D7B5A5 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE349D81EA02A4400D7B5A5 /* Meal.swift */; };
+		4EE349DB1EA4075B00D7B5A5 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE349DA1EA4075B00D7B5A5 /* MealTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		4E074CA31DCE8673004AF8B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E316B9C1E998F2300FF9727 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		4EE349D81EA02A4400D7B5A5 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		4EE349DA1EA4075B00D7B5A5 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				4E074C8A1DCE8673004AF8B9 /* LaunchScreen.storyboard */,
 				4E074C8D1DCE8673004AF8B9 /* Info.plist */,
 				4EE349D81EA02A4400D7B5A5 /* Meal.swift */,
+				4EE349DA1EA4075B00D7B5A5 /* MealTableViewCell.swift */,
 			);
 			path = "FoodTracker-Ed";
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				4E074C841DCE8673004AF8B9 /* ViewController.swift in Sources */,
 				4E316B9D1E998F2300FF9727 /* RatingControl.swift in Sources */,
 				4E074C821DCE8673004AF8B9 /* AppDelegate.swift in Sources */,
+				4EE349DB1EA4075B00D7B5A5 /* MealTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
